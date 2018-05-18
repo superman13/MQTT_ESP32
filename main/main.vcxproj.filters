@@ -9,10 +9,6 @@
       <UniqueIdentifier>{e5520232-990b-4f17-bacd-3dcb9805ab73}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource files">
-      <UniqueIdentifier>{da17f942-f15b-4896-b211-b8143cfcf91b}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
-    </Filter>
     <Filter Include="Source files\Device-specific files">
       <UniqueIdentifier>{c76c84e1-2778-41d6-a9ff-545f0304014f}</UniqueIdentifier>
     </Filter>
@@ -135,6 +131,81 @@
     </Filter>
     <Filter Include="VisualGDB settings">
       <UniqueIdentifier>{a32c2bf1-89fb-461d-8169-045623ecf8c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\components">
+      <UniqueIdentifier>{02c27c77-f68d-4ccd-ad80-f1d695697a8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\components\espmqtt">
+      <UniqueIdentifier>{6fc8c53f-294e-4133-ae78-1a11237734bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\components\espmqtt\include">
+      <UniqueIdentifier>{d5c55f74-77ef-40ce-9178-26e2a7a71f81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\components\espmqtt\lib">
+      <UniqueIdentifier>{91b55c14-7a25-4384-8f82-e7f50bbe922b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\components\espmqtt\lib\include">
+      <UniqueIdentifier>{3fee4949-1f5c-4014-b4cd-642baec7a302}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\components">
+      <UniqueIdentifier>{a01cd79a-dd8b-4b2e-90a9-996356f21ea8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\components\espmqtt">
+      <UniqueIdentifier>{d6339caf-5d86-4ab0-bc8c-a549f6174db6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\components\espmqtt\examples">
+      <UniqueIdentifier>{318cc26b-cbdd-44aa-8cdc-59bf52cfaacc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\components\espmqtt\examples\mqtt_ssl">
+      <UniqueIdentifier>{b6768be2-7da9-4045-82c7-b7959a306a71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\components\espmqtt\examples\mqtt_ssl\main">
+      <UniqueIdentifier>{8debd1fe-4888-4562-86cf-0e09e95b1424}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\components\espmqtt\examples\mqtt_tcp">
+      <UniqueIdentifier>{d316aaef-d6b7-42f1-9cfb-bf2332339cc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\components\espmqtt\examples\mqtt_tcp\main">
+      <UniqueIdentifier>{0515e84c-6689-4718-ba34-2742ce3521a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\components\espmqtt\examples\mqtt_ws">
+      <UniqueIdentifier>{32e3d348-269f-47d5-ad4a-5e9b38fff3d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\components\espmqtt\examples\mqtt_ws\main">
+      <UniqueIdentifier>{97c9572d-b218-4e71-bc36-45a530824dbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\components\espmqtt\examples\mqtt_wss">
+      <UniqueIdentifier>{83d36289-baa4-4552-82da-f7a3b7c9f0c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\components\espmqtt\examples\mqtt_wss\main">
+      <UniqueIdentifier>{097ef03c-a7b8-481b-99cf-175b3a097566}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\components\espmqtt\include">
+      <UniqueIdentifier>{ba58e01d-8d4f-4eb5-a3a2-af5961c60474}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\components\espmqtt\lib">
+      <UniqueIdentifier>{6b6686c1-facd-4ede-a1b2-a1a0aeb09f24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\components\espmqtt\lib\include">
+      <UniqueIdentifier>{bbc8eb61-69bb-42d1-83b1-d1f01d622cbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\port">
+      <UniqueIdentifier>{03a1da4c-fbe7-4d3d-9047-37afa02655b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\port\include">
+      <UniqueIdentifier>{4b55f3d0-fa84-490f-bda7-638986c00dfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\port\include\nghttp2">
+      <UniqueIdentifier>{597ff554-1c17-498a-8cdc-71de57417575}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\port">
+      <UniqueIdentifier>{2794865c-3603-4dfc-8a0d-95ee62098afb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\port\include">
+      <UniqueIdentifier>{f9b0b194-a8f9-478b-95a2-590473aac435}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\port\include\nghttp2">
+      <UniqueIdentifier>{0f8726ba-3718-4a2f-a60d-7fa40db5a520}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -2733,5 +2804,85 @@
     <None Include="esp32.xml">
       <Filter>VisualGDB settings</Filter>
     </None>
+    <None Include="components\espmqtt\CMakeLists.txt">
+      <Filter>Source files\components\espmqtt</Filter>
+    </None>
+    <ClCompile Include="components\espmqtt\mqtt_client.c">
+      <Filter>Source files\components\espmqtt</Filter>
+    </ClCompile>
+    <ClCompile Include="components\espmqtt\lib\mqtt_msg.c">
+      <Filter>Source files\components\espmqtt\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="components\espmqtt\lib\mqtt_outbox.c">
+      <Filter>Source files\components\espmqtt\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="components\espmqtt\lib\platform_esp32_idf.c">
+      <Filter>Source files\components\espmqtt\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="components\espmqtt\lib\transport.c">
+      <Filter>Source files\components\espmqtt\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="components\espmqtt\lib\transport_ssl.c">
+      <Filter>Source files\components\espmqtt\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="components\espmqtt\lib\transport_tcp.c">
+      <Filter>Source files\components\espmqtt\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="components\espmqtt\lib\transport_ws.c">
+      <Filter>Source files\components\espmqtt\lib</Filter>
+    </ClCompile>
+    <ClInclude Include="components\espmqtt\include\mqtt_client.h">
+      <Filter>Header files\components\espmqtt\include</Filter>
+    </ClInclude>
+    <ClInclude Include="components\espmqtt\include\mqtt_config.h">
+      <Filter>Header files\components\espmqtt\include</Filter>
+    </ClInclude>
+    <ClInclude Include="components\espmqtt\lib\include\mqtt_msg.h">
+      <Filter>Header files\components\espmqtt\lib\include</Filter>
+    </ClInclude>
+    <ClInclude Include="components\espmqtt\lib\include\mqtt_outbox.h">
+      <Filter>Header files\components\espmqtt\lib\include</Filter>
+    </ClInclude>
+    <ClInclude Include="components\espmqtt\lib\include\platform.h">
+      <Filter>Header files\components\espmqtt\lib\include</Filter>
+    </ClInclude>
+    <ClInclude Include="components\espmqtt\lib\include\platform_esp32_idf.h">
+      <Filter>Header files\components\espmqtt\lib\include</Filter>
+    </ClInclude>
+    <ClInclude Include="components\espmqtt\lib\include\transport.h">
+      <Filter>Header files\components\espmqtt\lib\include</Filter>
+    </ClInclude>
+    <ClInclude Include="components\espmqtt\lib\include\transport_ssl.h">
+      <Filter>Header files\components\espmqtt\lib\include</Filter>
+    </ClInclude>
+    <ClInclude Include="components\espmqtt\lib\include\transport_tcp.h">
+      <Filter>Header files\components\espmqtt\lib\include</Filter>
+    </ClInclude>
+    <ClInclude Include="components\espmqtt\lib\include\transport_ws.h">
+      <Filter>Header files\components\espmqtt\lib\include</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\SysGCC\esp32\SysGCC\esp32-bsp\esp-idf\components\nghttp\port\http_parser.c">
+      <Filter>Source files\port</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\SysGCC\esp32\SysGCC\esp32-bsp\esp-idf\components\nghttp\port\include\config.h">
+      <Filter>Header files\port\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\SysGCC\esp32\SysGCC\esp32-bsp\esp-idf\components\nghttp\port\include\http_parser.h">
+      <Filter>Header files\port\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\SysGCC\esp32\SysGCC\esp32-bsp\esp-idf\components\nghttp\port\include\nghttp-config.h">
+      <Filter>Header files\port\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\SysGCC\esp32\SysGCC\esp32-bsp\esp-idf\components\nghttp\port\include\nghttp2\nghttp2ver.h">
+      <Filter>Header files\port\include\nghttp2</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

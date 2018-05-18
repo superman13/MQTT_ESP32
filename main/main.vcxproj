@@ -44,7 +44,17 @@
       <Optimization>Og</Optimization>
       <CLanguageStandard>GNU99</CLanguageStandard>
       <CPPLanguageStandard>GNUPP11</CPPLanguageStandard>
+      <AdditionalIncludeDirectories>components/espmqtt/include;components/espmqtt/lib/include;../../../../SysGCC/esp32/SysGCC/esp32-bsp/esp-idf/components/nghttp/nghttp2/lib/includes;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG=1;%(ClCompile.PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions />
     </ClCompile>
+    <Link>
+      <LibrarySearchDirectories>%(Link.LibrarySearchDirectories)</LibrarySearchDirectories>
+      <AdditionalLibraryNames>%(Link.AdditionalLibraryNames)</AdditionalLibraryNames>
+      <AdditionalLinkerInputs>%(Link.AdditionalLinkerInputs)</AdditionalLinkerInputs>
+      <LinkerScript />
+      <AdditionalOptions />
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
     <ClCompile>
@@ -52,14 +62,14 @@
       <CPPLanguageStandard>GNUPP11</CPPLanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
-  <ItemGroup>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
     <ClCompile Include="main.c" />
-    <None Include="esp32.props" />
+    <None Include="esp32.props">
+      <SubType>Designer</SubType>
+    </None>
     <ClCompile Include="$(BSP_ROOT)\esp-idf\components\esp32\app_trace.c" />
     <ClCompile Include="$(BSP_ROOT)\esp-idf\components\esp32\cache_err_int.c" />
     <ClCompile Include="$(BSP_ROOT)\esp-idf\components\esp32\clk.c" />
@@ -322,6 +332,8 @@
     <ClCompile Include="$(BSP_ROOT)\esp-idf\components\vfs\vfs_uart.c" />
     <ClCompile Include="$(BSP_ROOT)\esp-idf\components\xtensa-debug-module\eri.c" />
     <ClCompile Include="$(BSP_ROOT)\esp-idf\components\xtensa-debug-module\trax.c" />
+    <ClInclude Include="config.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="sdkconfig.h" />
     <ClInclude Include="user_config.h" />
     <ClInclude Include="$(BSP_ROOT)\esp-idf\components\esp32\phy.h" />
@@ -923,5 +935,29 @@
     <None Include="main-Debug.vgdbsettings" />
     <None Include="main-Release.vgdbsettings" />
     <None Include="esp32.xml" />
+    <None Include="components\espmqtt\CMakeLists.txt" />
+    <ClCompile Include="components\espmqtt\mqtt_client.c" />
+    <ClCompile Include="components\espmqtt\lib\mqtt_msg.c" />
+    <ClCompile Include="components\espmqtt\lib\mqtt_outbox.c" />
+    <ClCompile Include="components\espmqtt\lib\platform_esp32_idf.c" />
+    <ClCompile Include="components\espmqtt\lib\transport.c" />
+    <ClCompile Include="components\espmqtt\lib\transport_ssl.c" />
+    <ClCompile Include="components\espmqtt\lib\transport_tcp.c" />
+    <ClCompile Include="components\espmqtt\lib\transport_ws.c" />
+    <ClInclude Include="components\espmqtt\include\mqtt_client.h" />
+    <ClInclude Include="components\espmqtt\include\mqtt_config.h" />
+    <ClInclude Include="components\espmqtt\lib\include\mqtt_msg.h" />
+    <ClInclude Include="components\espmqtt\lib\include\mqtt_outbox.h" />
+    <ClInclude Include="components\espmqtt\lib\include\platform.h" />
+    <ClInclude Include="components\espmqtt\lib\include\platform_esp32_idf.h" />
+    <ClInclude Include="components\espmqtt\lib\include\transport.h" />
+    <ClInclude Include="components\espmqtt\lib\include\transport_ssl.h" />
+    <ClInclude Include="components\espmqtt\lib\include\transport_tcp.h" />
+    <ClInclude Include="components\espmqtt\lib\include\transport_ws.h" />
+    <ClCompile Include="..\..\..\..\SysGCC\esp32\SysGCC\esp32-bsp\esp-idf\components\nghttp\port\http_parser.c" />
+    <ClInclude Include="..\..\..\..\SysGCC\esp32\SysGCC\esp32-bsp\esp-idf\components\nghttp\port\include\config.h" />
+    <ClInclude Include="..\..\..\..\SysGCC\esp32\SysGCC\esp32-bsp\esp-idf\components\nghttp\port\include\http_parser.h" />
+    <ClInclude Include="..\..\..\..\SysGCC\esp32\SysGCC\esp32-bsp\esp-idf\components\nghttp\port\include\nghttp-config.h" />
+    <ClInclude Include="..\..\..\..\SysGCC\esp32\SysGCC\esp32-bsp\esp-idf\components\nghttp\port\include\nghttp2\nghttp2ver.h" />
   </ItemGroup>
 </Project>
