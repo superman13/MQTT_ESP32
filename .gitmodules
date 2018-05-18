@@ -1,0 +1,3 @@
+[submodule "main/components/espmqtt"]
+	path = main/components/espmqtt
+	url = https://github.com/tuanpmt/espmqtt.git
